@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="261" viewBox="0 0 240 261">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="パス_109570" data-name="パス 109570" d="M0,0H212.861L223.3,76.764,12.922,20.717Z" transform="translate(928 380)" fill="#f2ece6" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="パス_109571" data-name="パス 109571" d="M0,0H182.295V18.621L27.621,29.357Z" transform="translate(928 380)" fill="#b49a7b" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_19011" data-name="グループ 19011" transform="translate(-1176 -525)">
+    <circle id="楕円形_611" data-name="楕円形 611" cx="120" cy="120" r="120" transform="translate(1176 546)" fill="#fff"/>
+    <g id="グループ_19005" data-name="グループ 19005" transform="translate(0 9.303)">
+      <path id="パス_109568" data-name="パス 109568" d="M-3024.862-13073.581s-22.323-36.733-28.07-34-16.836,33.479,0,51.021C-3038.819-13052.449-3024.862-13073.581-3024.862-13073.581Z" transform="translate(4312.861 13623.728)" fill="#4b3928"/>
+      <path id="パス_109569" data-name="パス 109569" d="M-3061.861-13073.581s22.323-36.733,28.07-34,16.836,33.479,0,51.021C-3047.9-13052.449-3061.861-13073.581-3061.861-13073.581Z" transform="translate(4365.862 13623.426)" fill="#fff"/>
+    </g>
+    <g id="マスクグループ_172" data-name="マスクグループ 172" transform="translate(259 166)" clip-path="url(#clip-path)">
+      <circle id="楕円形_612" data-name="楕円形 612" cx="120" cy="120" r="120" transform="translate(917 380)" fill="#f2ece6"/>
+    </g>
+    <g id="マスクグループ_173" data-name="マスクグループ 173" transform="translate(2333.246 1166) rotate(180)" clip-path="url(#clip-path-2)">
+      <circle id="楕円形_613" data-name="楕円形 613" cx="120" cy="120" r="120" transform="translate(917 380)" fill="#b49a7b"/>
+    </g>
+    <text id="QUOカード" transform="translate(1249 626)" fill="#4b3928" font-size="18" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700"><tspan x="0" y="0">QUO</tspan><tspan y="0">カード</tspan></text>
+    <g id="グループ_19012" data-name="グループ 19012" transform="translate(0 -1)">
+      <rect id="長方形_8868" data-name="長方形 8868" width="118" height="34" rx="17" transform="translate(1237 563)" fill="#db7d2d"/>
+      <text id="来場特典" transform="translate(1264 587)" fill="#fff" font-size="16" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500"><tspan x="0" y="0">来場特典</tspan></text>
+    </g>
+    <text id="プレゼント_" data-name="プレゼント！" transform="translate(1237 713)" fill="#4b3928" font-size="20" font-family="NotoSansJP-Bold, Noto Sans JP" font-weight="700"><tspan x="0" y="0">プレゼント！</tspan></text>
+    <g id="グループ_19010" data-name="グループ 19010" transform="translate(9 28)">
+      <text id="_5_000" data-name="5,000" transform="translate(1221 651)" fill="#db7d2d" font-size="48" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500" letter-spacing="-0.03em"><tspan x="0" y="0">5,000</tspan></text>
+      <text id="最_大" data-name="最
+大" transform="translate(1199 632)" fill="#db7d2d" font-size="18" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500" letter-spacing="0.05em"><tspan x="0" y="0">最</tspan><tspan x="0" y="20">大</tspan></text>
+      <text id="円分" transform="translate(1343 651)" fill="#db7d2d" font-size="20" font-family="NotoSansJP-Medium, Noto Sans JP" font-weight="500" letter-spacing="0.05em"><tspan x="0" y="0">円分</tspan></text>
+    </g>
+    <text id="_進呈条件あり" data-name="※進呈条件あり" transform="translate(1296 751)" fill="#3a3a3a" font-size="14" font-family="NotoSansJP-Regular, Noto Sans JP"><tspan x="-49" y="0">※進呈条件</tspan><tspan y="0">あり</tspan></text>
+  </g>
+</svg>
