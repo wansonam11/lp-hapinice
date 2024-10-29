@@ -1072,6 +1072,8 @@ a * {
   &__content {
     display: flex;
     gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (max-width: 640px) {
       flex-direction: column;
@@ -1743,6 +1745,10 @@ a * {
     padding: 70px 40px 40px 40px;
     margin-top: -37px;
 
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
+
     @media screen and (max-width: 640px) {
       flex-direction: column;
       height: auto;
@@ -2010,6 +2016,7 @@ a * {
   }
 
   &__item {
+    width: calc((100% - 120px) / 3);
     @media screen and (max-width: 1024px) {
       width: calc((100% - 60px) / 2);
     }
@@ -2154,6 +2161,7 @@ a * {
   }
 
   &__item {
+    width: calc((100% - 120px) / 3);
     @media screen and (max-width: 1024px) {
       width: calc((100% - 60px) / 2);
     }

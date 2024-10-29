@@ -196,6 +196,8 @@ img {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -241,9 +243,7 @@ section {
 
 input[type=submit],
 input[type=button] {
-  -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
+  appearance: button;
   border: none;
   box-sizing: border-box;
 }
@@ -659,10 +659,8 @@ a * {
 .fv__slider--cnt .img-pc {
   width: 100%;
   height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  object-fit: cover;
+  object-position: center bottom;
 }
 @media screen and (max-width: 640px) {
   .fv__slider--cnt .img-pc {
@@ -677,8 +675,7 @@ a * {
     display: block;
     width: 100%;
     height: 100vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .fv__container {
@@ -1045,6 +1042,8 @@ a * {
 .about__content {
   display: flex;
   gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (max-width: 640px) {
   .about__content {
@@ -1661,6 +1660,11 @@ a * {
   padding: 70px 40px 40px 40px;
   margin-top: -37px;
 }
+@media screen and (max-width: 1024px) {
+  .idea__content {
+    height: auto;
+  }
+}
 @media screen and (max-width: 640px) {
   .idea__content {
     flex-direction: column;
@@ -1911,6 +1915,9 @@ a * {
   flex-wrap: wrap;
   justify-content: center;
 }
+.merit__item {
+  width: calc((100% - 120px) / 3);
+}
 @media screen and (max-width: 1024px) {
   .merit__item {
     width: calc((100% - 60px) / 2);
@@ -2049,6 +2056,9 @@ a * {
   .promise__box {
     flex-direction: column;
   }
+}
+.promise__item {
+  width: calc((100% - 120px) / 3);
 }
 @media screen and (max-width: 1024px) {
   .promise__item {
@@ -2675,4 +2685,6 @@ a * {
 .footer p {
   font-family: "Noto serif JP";
   font-size: 1.4rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
