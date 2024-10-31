@@ -197,8 +197,6 @@ img {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -244,7 +242,9 @@ section {
 
 input[type=submit],
 input[type=button] {
-  appearance: button;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   border: none;
   box-sizing: border-box;
 }
@@ -466,7 +466,7 @@ a * {
 }
 
 .header {
-  z-index: 999;
+  z-index: 1000;
   width: 100%;
   height: 80px;
   position: fixed;
@@ -480,17 +480,18 @@ a * {
 .header.is-scrolled {
   top: 0;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .header__container {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 0 60px;
+  padding: 0 0 0 60px;
 }
 @media screen and (max-width: 1024px) {
   .header__container {
-    margin: 0 6%;
+    padding: 0 6%;
   }
 }
 .header__logo {
@@ -735,8 +736,10 @@ a * {
 .fv__slider--cnt .img-pc {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
-  object-position: center bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 @media screen and (max-width: 640px) {
   .fv__slider--cnt .img-pc {
@@ -751,7 +754,8 @@ a * {
     display: block;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .fv__container {
@@ -874,6 +878,7 @@ a * {
   }
 }
 .concept__content {
+  align-items: flex-end;
   display: flex;
   width: 100%;
 }
@@ -1066,7 +1071,12 @@ a * {
   }
 }
 .concern__content__info {
-  width: 100%;
+  width: calc(100% - 120px - 40px);
+}
+@media screen and (max-width: 1024px) {
+  .concern__content__info {
+    width: 84%;
+  }
 }
 .concern__content__info h3 {
   font-size: 2.4rem;
@@ -1086,7 +1096,7 @@ a * {
 .concern__content__info p {
   font-size: 1.6rem;
   font-family: "Noto Sans JP";
-  line-height: 2;
+  line-height: 1.5;
 }
 @media screen and (max-width: 640px) {
   .concern__content__info p {
@@ -1145,10 +1155,11 @@ a * {
   }
 }
 .about__title {
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-family: "Noto Sans JP";
   font-weight: 400;
   margin-bottom: 56px;
+  line-height: 1.6;
 }
 @media screen and (max-width: 1024px) {
   .about__title {
@@ -1167,7 +1178,6 @@ a * {
   display: inline-block;
   width: 196px;
   margin-right: 10px;
-  margin-bottom: 16px;
 }
 @media screen and (max-width: 640px) {
   .about__title__logo {
@@ -1176,13 +1186,13 @@ a * {
 }
 .about__title__logo img {
   width: 100%;
+  vertical-align: inherit;
 }
 .about__title__foot-print {
   display: inline-block;
   width: 50px;
-  margin-left: -12px;
+  margin-left: -20px;
   position: relative;
-  bottom: 8px;
 }
 @media screen and (max-width: 375px) {
   .about__title__foot-print {
@@ -1256,6 +1266,7 @@ a * {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  height: 96px;
 }
 .about__box__title {
   font-size: 2.8rem;
@@ -1290,8 +1301,6 @@ a * {
 }
 
 .cta {
-  margin-bottom: 120px;
-  padding: 48px 0;
   cursor: pointer;
   width: 100%;
   background: url(./img/cta_bg.png) no-repeat center/cover;
@@ -1307,6 +1316,7 @@ a * {
   }
 }
 .cta__img {
+  padding-top: 48px;
   margin: 0 auto;
   margin-bottom: 28px;
   width: 620px;
@@ -1339,6 +1349,7 @@ a * {
   display: flex;
   margin: 0 auto;
   gap: 32px;
+  padding-bottom: 48px;
 }
 @media screen and (max-width: 640px) {
   .cta__btn {
@@ -1392,6 +1403,12 @@ a * {
 .point {
   background: var(--bc);
   overflow: hidden;
+  margin-top: 120px;
+}
+@media screen and (max-width: 1024px) {
+  .point {
+    margin-top: 12%;
+  }
 }
 .point__title {
   padding-top: 120px;
@@ -1426,6 +1443,12 @@ a * {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .point__title small {
+    margin-top: 1.6%;
+  }
 }
 
 .point .cmn-content__box {
@@ -1700,6 +1723,15 @@ a * {
     right: 50px;
   }
 }
+.cmn-display__sp-block {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .cmn-display__sp-block {
+    display: block;
+  }
+}
+
 .idea {
   padding-bottom: 80px;
 }
@@ -1729,6 +1761,8 @@ a * {
   text-align: center;
   padding-top: 120px;
   margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .idea__title {
@@ -1756,9 +1790,16 @@ a * {
   left: 4px;
 }
 .idea__title small {
+  letter-spacing: 0;
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .idea__title small {
+    margin-top: 1.6%;
+  }
 }
 .idea__btn {
   position: relative;
@@ -1839,6 +1880,8 @@ a * {
   font-size: 2.4rem;
   font-family: "Noto Sans JP";
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 1024px) {
   .idea__header {
@@ -1860,7 +1903,6 @@ a * {
   }
 }
 .idea__header span {
-  line-height: 100px;
   font-size: 3.2rem;
 }
 @media screen and (max-width: 640px) {
@@ -1941,6 +1983,8 @@ a * {
   font-size: 3.2rem;
   text-align: center;
   margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .works__title {
@@ -1967,9 +2011,16 @@ a * {
   left: 4px;
 }
 .works__title small {
+  letter-spacing: 0;
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .works__title small {
+    margin-top: 1.6%;
+  }
 }
 
 .works .cmn-content__box {
@@ -2086,6 +2137,8 @@ a * {
   font-size: 3.2rem;
   text-align: center;
   margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .merit__title {
@@ -2113,9 +2166,16 @@ a * {
   left: 4px;
 }
 .merit__title small {
+  letter-spacing: 0;
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .merit__title small {
+    margin-top: 1.6%;
+  }
 }
 .merit__sub-title {
   font-size: 2.4rem;
@@ -2210,6 +2270,8 @@ a * {
   text-align: center;
   padding-top: 120px;
   margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .promise__title {
@@ -2237,9 +2299,16 @@ a * {
   left: 4px;
 }
 .promise__title small {
+  letter-spacing: 0;
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .promise__title small {
+    margin-top: 1.6%;
+  }
 }
 .promise__sub-title {
   text-align: center;
@@ -2388,7 +2457,14 @@ a * {
 }
 
 .contract {
-  margin-bottom: 32px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .contract {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
 }
 .contract__container {
   width: 100%;
@@ -2480,6 +2556,8 @@ a * {
   padding-top: 120px;
   font-size: 3.2rem;
   text-align: center;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .contact__title {
@@ -2509,14 +2587,21 @@ a * {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 1024px) {
+  .contact__title small {
+    margin-top: 1.6%;
+  }
 }
 .contact__sub-title {
   font-weight: 400;
   font-size: 1.6rem;
   font-family: "Noto Sans JP";
-  font-weight: 600;
   text-align: center;
   padding: 56px 0 66px 0;
+  line-height: 2;
 }
 @media screen and (max-width: 1024px) {
   .contact__sub-title {
@@ -2648,6 +2733,8 @@ a * {
   text-align: center;
   padding-top: 120px;
   margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .company__title {
@@ -2683,6 +2770,13 @@ a * {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 1024px) {
+  .company__title small {
+    margin-top: 1.6%;
+  }
 }
 .company__sub-title {
   text-align: center;
@@ -2711,6 +2805,7 @@ a * {
   }
 }
 .company__sub-title span img {
+  vertical-align: inherit;
   width: 100%;
 }
 .company__text {
@@ -2773,7 +2868,7 @@ a * {
   width: 100%;
 }
 .company__info__header {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.4rem;
   font-family: "Noto Sans JP";
   text-align: center;
@@ -2898,6 +2993,8 @@ a * {
   text-align: center;
   padding-top: 120px;
   margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (max-width: 1024px) {
   .access__title {
@@ -2928,6 +3025,13 @@ a * {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
+  margin-top: 16px;
+  letter-spacing: 0;
+}
+@media screen and (max-width: 1024px) {
+  .access__title small {
+    margin-top: 1.6%;
+  }
 }
 .access__box {
   display: flex;
@@ -3017,12 +3121,11 @@ a * {
 }
 @media screen and (max-width: 1024px) {
   .footer__container {
-    padding: 0 2%;
+    padding: 0 4%;
   }
 }
 @media screen and (max-width: 640px) {
   .footer__container {
-    padding: 0 4%;
     flex-direction: column;
   }
 }
@@ -3040,6 +3143,4 @@ a * {
 .footer p {
   font-family: "Noto serif JP";
   font-size: 1.4rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
