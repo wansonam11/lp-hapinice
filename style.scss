@@ -764,7 +764,6 @@ a * {
 .fv {
   width: 100%;
   margin-bottom: 120px;
-
   @media screen and (max-width: 1024px) {
     margin-bottom: 12%;
   }
@@ -824,15 +823,24 @@ a * {
     top: 20%;
     width: 330px;
     left: 8%;
+    @media screen and (max-width: 1024px) {
+      width: 33vw
+    }
 
+    @media screen and (max-width: 500px) {
+      width: 40vw
+    }
     img {
       width: 100%;
     }
-
-    @media screen and (max-width: 375px) {
-      width: 250px;
-
+    p {
+      margin-top: 30px;
+      font-size: 2.4rem;
+      @media screen and (max-width: 1024px) {
+        font-size: 2.4vw;
+      }
     }
+
   }
 
   &__float {
@@ -846,7 +854,7 @@ a * {
     @media screen and (max-width: 1024px) {
       width: 24vw;
       height: 24vw;
-      z-index: 999;
+      z-index: 1000;
 
       a {
         img {
@@ -922,7 +930,6 @@ a * {
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
-
     @media screen and (max-width: 1024px) {
       padding: 0 2%;
     }
@@ -950,14 +957,12 @@ a * {
       width: 100%;
       padding-bottom: 4%;
       padding-right: 0;
-
     }
 
     &__title {
       width: 321px;
       height: 200px;
       margin-bottom: 48px;
-
       @media screen and (max-width: 1024px) {
         margin-bottom: 4%;
       }
@@ -982,8 +987,11 @@ a * {
       font-size: 3.2rem;
       font-family: "Noto Sans JP";
       margin-bottom: 40px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 4%;
+      }
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 640px) {
         font-size: 2rem;
       }
     }
@@ -1018,7 +1026,6 @@ a * {
   background-color: #F5F0EA;
   padding: 120px 0;
   margin-bottom: 120px;
-
   @media screen and (max-width: 1024px) {
     margin-bottom: 12%;
     padding: 10% 0;
@@ -1030,7 +1037,6 @@ a * {
     max-width: 1240px;
     padding: 0 20px;
     margin: 0 auto;
-
     @media screen and (max-width: 1024px) {
       padding: 0 2%;
     }
@@ -1049,7 +1055,6 @@ a * {
     z-index: 999;
     position: relative;
 
-
     .concern-sp {
       display: none
     }
@@ -1060,11 +1065,10 @@ a * {
     }
 
     @media screen and (max-width: 640px) {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     @media screen and (max-width: 375px) {
-      font-size: 2rem;
 
       .concern-sp {
         display: block;
@@ -1073,23 +1077,18 @@ a * {
   }
 
   &__content {
-    //padding-left: 221px;
     margin: 0 auto;
     width: calc(100% - 160px);
     max-width: 760px;
     z-index: 9;
     position: relative;
-
     @media screen and (max-width: 1024px) {
       width: calc(100% - 20px);
     }
 
     @media screen and (max-width: 640px) {
-      width: calc(100% - 60px);
-    }
-
-    @media screen and (max-width: 375px) {
       width: 100%;
+      max-width: 425px;
     }
 
     &__item {
@@ -1127,21 +1126,19 @@ a * {
 
     &__info {
       width: calc(100% - 120px - 40px);
-
       @media screen and (max-width: 1024px) {
         width: calc(100% - 12% - 4%);
+      }
+      @media screen and (max-width: 640px) {
+        width: 100%
       }
 
       h3 {
         font-size: 2.4rem;
         font-family: "Noto Sans JP";
         font-weight: 500;
-
+        margin-bottom: 16px;
         @media screen and (max-width: 640px) {
-          font-size: 2rem;
-        }
-
-        @media screen and (max-width: 375px) {
           font-size: 1.8rem;
         }
       }
@@ -1152,7 +1149,7 @@ a * {
         line-height: 1.5;
 
         @media screen and (max-width: 640px) {
-          padding: 4% 0 8% 0;
+          padding: 0% 0 8% 0;
           font-size: 1.4rem;
         }
 
@@ -1213,9 +1210,11 @@ a * {
     font-weight: 400;
     margin-bottom: 56px;
     line-height: 1.6;
-
     @media screen and (max-width: 1024px) {
       margin-bottom: 10%;
+    }
+    @media screen and (max-width: 640px) {
+      font-size: 2rem;
     }
 
     .about-sp {
@@ -1246,6 +1245,9 @@ a * {
       width: 50px;
       margin-left: -20px;
       position: relative;
+      @media screen and (max-width: 640px) {
+        margin-left: -4%;
+      }
 
       @media screen and (max-width: 375px) {
         margin-left: -1%;
@@ -1253,6 +1255,7 @@ a * {
 
       img {
         width: 100%;
+        vertical-align: baseline;
       }
 
       @media screen and (max-width: 375px) {
@@ -1270,8 +1273,8 @@ a * {
         font-size: 3rem;
       }
 
-      @media screen and (max-width: 1024px) {
-        font-size: 2.8rem;
+      @media screen and (max-width: 640px) {
+        font-size: 2rem;
       }
     }
   }
@@ -1281,10 +1284,9 @@ a * {
     gap: 60px;
     flex-wrap: wrap;
     justify-content: center;
-
-
     @media screen and (max-width: 640px) {
       flex-direction: column;
+      gap: 20px;
     }
   }
 
@@ -1321,6 +1323,9 @@ a * {
       justify-content: space-between;
       margin-bottom: 24px;
       height: 96px;
+      @media screen and (max-width: 1024px) {
+        height: auto;
+      }
     }
 
     &__title {
@@ -1328,7 +1333,7 @@ a * {
       font-family: "Noto Sans JP";
       font-weight: 500;
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 640px) {
         font-size: 2rem;
       }
     }
@@ -1363,13 +1368,6 @@ a * {
   width: 100%;
   background: url(./img/cta_bg.png) no-repeat center / cover;
 
-  @media screen and (max-width: 1024px) {
-    margin-bottom: 12%;
-  }
-
-  @media screen and (max-width: 640px) {
-    margin-bottom: 0;
-  }
 
   &__img {
     padding-top: 48px;
@@ -2518,7 +2516,7 @@ a * {
       text-align: center;
       font-size: 2.4rem;
       font-family: "Noto Sans JP";
-      font-weight: 400;
+      font-weight: 500;
 
       @media screen and (max-width: 375px) {
         font-size: 1.8rem;
@@ -2673,7 +2671,6 @@ a * {
 .contact {
   padding-bottom: 160px;
   background-color: #F2ECE6;
-
   @media screen and (max-width: 1024px) {
     padding-bottom: 16%;
   }
@@ -2744,7 +2741,6 @@ a * {
     text-align: center;
     padding: 56px 0 66px 0;
     line-height: 2;
-
     @media screen and (max-width: 1024px) {
       padding: 6% 0 6% 0;
     }
@@ -2801,9 +2797,11 @@ a * {
       @media screen and (max-width: 1024px) {
         padding: 3%;
       }
-
       @media screen and (max-width: 640px) {
         font-size: 1.6rem;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 1.4rem;
       }
     }
 
@@ -2963,12 +2961,16 @@ a * {
     font-size: 1.6rem;
     font-family: "Noto Sans JP";
     margin-bottom: 56px;
+    @media screen and (max-width: 375px) {
+      margin-bottom: 5%;
+    }
 
     .company-sp {
       display: none;
     }
 
     @media screen and (max-width: 375px) {
+      font-size: 1.4rem;
       .company-sp {
         display: block;
       }
@@ -3030,6 +3032,10 @@ a * {
       @media screen and (max-width: 640px) {
         font-size: 2rem;
         padding: 4%;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 1.8rem;
+  
       }
     }
 
@@ -3238,6 +3244,10 @@ a * {
       font-family: "Noto Sans JP";
       font-weight: 600;
       margin-bottom: 20px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 2%;
+        font-size: 1.8rem;
+      }
     }
 
     ul {
@@ -3246,6 +3256,9 @@ a * {
         font-family: "Noto Sans JP";
         font-weight: 400;
         line-height: 2;
+        @media screen and (max-width: 375px) {
+          font-size: 1.4rem;
+        }
       }
     }
   }
