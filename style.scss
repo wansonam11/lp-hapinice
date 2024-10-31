@@ -487,18 +487,31 @@ a * {
     height: 64px;
   }
 
+  &.is-scrolled {
+    top: 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+
+  }
+
 
   &__container {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 0 60px;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0 6%;
+    }
   }
 
   &__logo {
     width: 196px;
     height: 32px;
     margin-top: 24px;
-    margin-left: 40px;
+
+    @media screen and (max-width: 1024px) {}
 
     @media screen and (max-width: 640px) {
       width: 122px;
@@ -512,12 +525,16 @@ a * {
 
   &__menu {
     display: flex;
-    gap: 38px;
+    gap: 40px;
+
+    @media screen and (max-width: 640px) {
+      gap: 23px;
+    }
 
     .ham-menu {
-      width: 100px;
-      height: 100px;
-      background: url(./img/header_img_03_pc.png) no-repeat center;
+      cursor: pointer;
+      width: 40px;
+      height: auto;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
@@ -533,19 +550,19 @@ a * {
       @media screen and (max-width: 640px) {
         width: 40px;
         height: auto;
-        right: 10%;
       }
 
       &.active span {
+
+
         &:nth-child(1) {
+          transition: top 0.2s, bottom 0.2s, transform 0.4s 0.2s;
           transform: rotate(-45deg);
-          top: 48px;
-          width: 60px;
-          left: 13px;
+          top: 40px;
 
           @media screen and (max-width: 640px) {
-            top: 23px;
-
+            top: 30px;
+            left: 0;
           }
         }
 
@@ -558,57 +575,57 @@ a * {
         }
 
         &:nth-child(3) {
+          transition: top 0.2s, bottom 0.2s, transform 0.4s 0.2s;
           transform: rotate(45deg);
-          top: 49px;
-          width: 75px;
-          left: 13px;
+          top: 41px;
 
           @media screen and (max-width: 640px) {
-            top: 23px;
-
+            top: 31px;
+            left: 1px;
           }
         }
       }
 
-      span {
-        display: inline-block;
-        position: absolute;
-        left: 20px;
-        height: 1px;
-        background: #222;
-        width: 40px;
+      &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
 
-
-        &:nth-child(1) {
-          top: 50px;
+        span {
+          display: inline-block;
           position: absolute;
-          left: 0;
+          height: 1px;
+          background: #222;
+          width: 100%;
 
-          @media screen and (max-width: 640px) {
-            top: 43px;
+          &:nth-child(1) {
+            transition: 0.2s 0.2s, bottom 0.2s 0.2s, transform 0.4s;
+            top: 53px;
+            position: absolute;
+            left: 0;
+
+            @media screen and (max-width: 640px) {
+              top: 41px;
+            }
+          }
+
+          &:nth-child(2) {}
+
+          &:nth-child(3) {
+            transition: top 0.2s 0.2s, bottom 0.2s 0.2s, transform 0.4s;
+            top: 27px;
+            position: absolute;
+            left: 0;
+
+            @media screen and (max-width: 640px) {
+              top: 23px;
+            }
           }
         }
 
-        &:nth-child(2) {
-          top: 37px;
-          position: absolute;
-          left: 0;
-
-          @media screen and (max-width: 640px) {
-            top: 32px;
-          }
-        }
-
-        &:nth-child(3) {
-          top: 25px;
-          position: absolute;
-          left: 0;
-
-          @media screen and (max-width: 640px) {
-            top: 21px;
-          }
-        }
       }
+
     }
   }
 
@@ -632,6 +649,46 @@ a * {
     }
   }
 
+  &__nav-sp {
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    line-height: 4;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 20%;
+
+    ul {
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .header__logo-sp {
+        margin: 0 auto;
+      }
+
+      li {
+        a {
+          font-size: 2rem;
+          font-family: "Zen Kaku Gothic New";
+          color: #fff;
+        }
+      }
+    }
+  }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -641,6 +698,40 @@ a * {
     width: 220px;
     height: 100px;
 
+    //z-index: 999;
+    &-link {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      position: relative;
+
+      &:hover {
+        &::before {
+          transform: translate(-50%, 0);
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 108px;
+        height: 107px;
+        background: url(./img/icon_header-btn.svg) no-repeat center center / cover;
+        transition: .4s;
+        z-index: -1;
+        transform: translate(-50%, -100%);
+        opacity: 0;
+      }
+
+      ;
+    }
+
     img {
       width: 120px;
       height: 30px;
@@ -649,7 +740,6 @@ a * {
     @media screen and (max-width: 640px) {
       display: none;
     }
-
   }
 
   &__tel {
@@ -657,6 +747,15 @@ a * {
 
     @media screen and (max-width: 640px) {
       display: block;
+    }
+  }
+
+  &.active {
+
+    .header__nav-sp {
+      //display: block;
+      background: #F2ECE6;
+      transform: translateX(0);
     }
   }
 }
@@ -735,6 +834,79 @@ a * {
 
     }
   }
+
+  &__float {
+    z-index: 998;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 240px;
+    height: 240px;
+
+    @media screen and (max-width: 1024px) {
+      width: 24vw;
+      height: 24vw;
+      z-index: 999;
+
+      a {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      a {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  &__float-sp {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    @media screen and (max-width: 640px) {
+      display: block;
+    }
+
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: flex-end;
+
+      &__cta01 {
+        width: calc((100% - 15px) / 2);
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      &__cta02 {
+        width: calc((100% - 15px) / 2);
+        display: block;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 //concept
@@ -789,8 +961,13 @@ a * {
         margin-bottom: 4%;
       }
 
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 640px) {
         width: 200px;
+        height: auto;
+      }
+
+      @media screen and (max-width: 375px) {
+        width: 150px;
         height: auto;
       }
 
@@ -836,6 +1013,7 @@ a * {
 
 //concern
 .concern {
+  overflow: hidden;
   background-color: #F5F0EA;
   padding: 120px 0;
   margin-bottom: 120px;
@@ -867,6 +1045,9 @@ a * {
     font-size: 3.2rem;
     font-family: "Noto Sans JP";
     margin-bottom: 56px;
+    z-index: 999;
+    position: relative;
+
 
     .concern-sp {
       display: none
@@ -874,6 +1055,7 @@ a * {
 
     @media screen and (max-width: 1024px) {
       margin-bottom: 5%;
+      font-size: 3rem;
     }
 
     @media screen and (max-width: 640px) {
@@ -887,7 +1069,6 @@ a * {
         display: block;
       }
     }
-
   }
 
   &__content {
@@ -895,6 +1076,12 @@ a * {
     margin: 0 auto;
     width: calc(100% - 160px);
     max-width: 760px;
+    z-index: 9;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+      width: calc(100% - 20px);
+    }
 
     @media screen and (max-width: 640px) {
       width: calc(100% - 60px);
@@ -925,12 +1112,21 @@ a * {
     }
 
     &__icon {
+      width: 120px;
+      height: 120px;
+
+      img {
+        width: 100%;
+      }
+
       @media screen and (max-width: 640px) {
         margin: 0 auto;
       }
     }
 
     &__info {
+      width: 100%;
+
       h3 {
         font-size: 2.4rem;
         font-family: "Noto Sans JP";
@@ -964,17 +1160,17 @@ a * {
 
   &__foot-print01 {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -8%;
+    right: 10%;
 
     @media screen and (max-width: 640px) {
-      display: none;
+      display: none
     }
   }
 
   &__foot-print02 {
     position: absolute;
-    left: 0;
+    left: 5%;
     bottom: -12%;
 
     @media screen and (max-width: 640px) {
@@ -1042,7 +1238,13 @@ a * {
     &__foot-print {
       display: inline-block;
       width: 50px;
-      margin-left: -25px;
+      margin-left: -12px;
+      position: relative;
+      bottom: 8px;
+
+      @media screen and (max-width: 375px) {
+        margin-left: -1%;
+      }
 
       img {
         width: 100%;
@@ -1075,6 +1277,7 @@ a * {
     flex-wrap: wrap;
     justify-content: center;
 
+
     @media screen and (max-width: 640px) {
       flex-direction: column;
     }
@@ -1082,6 +1285,10 @@ a * {
 
   &__box {
     width: 360px;
+
+    @media screen and (max-width: 1024px) {
+      width: calc((100% - 60px) / 2);
+    }
 
     @media screen and (max-width: 640px) {
       width: 100%;
@@ -1150,7 +1357,7 @@ a * {
   padding: 48px 0;
   cursor: pointer;
   width: 100%;
-  background: url(./img/cta_bg.png) no-repeat center bottom/cover;
+  background: url(./img/cta_bg.png) no-repeat center / cover;
   //background-size: cover;
 
   @media screen and (max-width: 1024px) {
@@ -1164,7 +1371,8 @@ a * {
   &__img {
     margin: 0 auto;
     margin-bottom: 28px;
-    width: 655px;
+    width: 620px;
+    max-width: 100%;
 
     img {
       width: 100%;
@@ -1610,6 +1818,10 @@ a * {
 .idea {
   padding-bottom: 80px;
 
+  @media screen and (max-width: 640px) {
+    padding-bottom: 8%;
+  }
+
   &__container {
     width: 100%;
     max-width: 1240px;
@@ -1664,6 +1876,8 @@ a * {
   }
 
   &__btn {
+    position: relative;
+    cursor: pointer;
     margin: 0 auto;
     width: 247px;
     height: 56px;
@@ -1671,6 +1885,48 @@ a * {
     text-align: center;
     margin-bottom: 40px;
     border-radius: 20px;
+
+    &.js-idea-button {
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+
+        span {
+          opacity: 0;
+        }
+      }
+    }
+
+    &::before {
+      content: "閉じる";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 56px;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 5px);
+      left: 90%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid;
+      border-top: 1px solid;
+      transform: rotate(135deg);
+      transition: 0.4s;
+    }
 
     @media screen and (max-width: 1024px) {
       margin-bottom: 4%;
@@ -1684,6 +1940,7 @@ a * {
     span {
       line-height: 56px;
       font-size: 1.6rem;
+      opacity: 1;
     }
   }
 
@@ -1806,6 +2063,7 @@ a * {
     font-size: 3.2rem;
     text-align: center;
     margin-bottom: 40px;
+
     @media screen and (max-width: 1024px) {
       margin-bottom: 8%;
     }
@@ -1837,8 +2095,6 @@ a * {
     }
   }
 }
-
-
 
 .works .cmn-content__box {
   padding-top: 120px;
@@ -1931,13 +2187,12 @@ a * {
   }
 }
 
-
-
 //merit
 .merit {
   overflow: hidden;
   padding-bottom: 120px;
   background-color: #F2ECE6;
+
   @media screen and (max-width: 1024px) {
     padding-bottom: 12%;
   }
@@ -1962,6 +2217,7 @@ a * {
     font-size: 3.2rem;
     text-align: center;
     margin-bottom: 40px;
+
     @media screen and (max-width: 1024px) {
       padding-top: 12%;
       margin-bottom: 4%;
@@ -2013,10 +2269,15 @@ a * {
     flex-wrap: wrap;
     justify-content: center;
 
+    @media screen and (max-width: 375px) {
+      font-size: 2rem;
+      margin-bottom: 4%;
+    }
   }
 
   &__item {
     width: calc((100% - 120px) / 3);
+
     @media screen and (max-width: 1024px) {
       width: calc((100% - 60px) / 2);
     }
@@ -2028,11 +2289,9 @@ a * {
 
   &__img {
     width: 360px;
+    width: 100%;
     margin: 0 auto;
 
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
 
     img {
       width: 100%;
@@ -2090,6 +2349,7 @@ a * {
     text-align: center;
     padding-top: 120px;
     margin-bottom: 40px;
+
     @media screen and (max-width: 1024px) {
       padding-top: 12%;
       margin-bottom: 4%;
@@ -2162,6 +2422,7 @@ a * {
 
   &__item {
     width: calc((100% - 120px) / 3);
+
     @media screen and (max-width: 1024px) {
       width: calc((100% - 60px) / 2);
     }
@@ -2179,10 +2440,7 @@ a * {
   &__img {
     width: 360px;
     margin: 0 auto;
-
-    @media screen and (max-width: 1024px) {
-      width: 100%;
-    }
+    width: 100%;
 
     img {
       width: 100%;
@@ -2224,6 +2482,8 @@ a * {
   }
 
   &__btn {
+    position: relative;
+    cursor: pointer;
     margin: 0 auto;
     width: 247px;
     height: 56px;
@@ -2232,9 +2492,52 @@ a * {
     margin-bottom: 80px;
     border-radius: 20px;
 
+    &.js-promise-button {
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+
+        span {
+          opacity: 0;
+        }
+      }
+    }
+
+    &::before {
+      content: "閉じる";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 56px;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 5px);
+      left: 90%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid;
+      border-top: 1px solid;
+      transform: rotate(135deg);
+      transition: 0.4s;
+    }
+
     span {
       line-height: 56px;
       font-size: 1.6rem;
+      opacity: 1;
     }
   }
 }
@@ -2309,6 +2612,10 @@ a * {
   padding-bottom: 160px;
   background-color: #F2ECE6;
 
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 16%;
+  }
+
   &__container {
     width: 100%;
     max-width: 1240px;
@@ -2328,6 +2635,10 @@ a * {
     padding-top: 120px;
     font-size: 3.2rem;
     text-align: center;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 12%
+    }
 
     @media screen and (max-width: 375px) {
       font-size: 2rem;
@@ -2379,22 +2690,104 @@ a * {
     width: 100%;
     max-width: 792px;
     margin: 0 auto;
-
   }
 
   &__tab {
     display: flex;
     gap: 32px;
+    cursor: pointer;
   }
 
   &__item {
+    opacity: .4;
     width: 380px;
+
+    &__select {
+      cursor: pointer;
+    }
+
+    &.active {
+      opacity: 1;
+      transition: .4s;
+    }
 
     img {
       width: 100%;
     }
 
-    &__select {}
+    &__select {
+      border: none;
+      background: none;
+    }
+  }
+
+  &__text {
+
+    &__contents {
+      font-size: 2rem;
+      padding: 30px;
+      color: #DB7D2D;
+      font-weight: bold;
+
+      @media screen and (max-width: 1024px) {
+        padding: 3%;
+      }
+
+      @media screen and (max-width: 640px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 640px) {
+        flex-direction: column;
+      }
+
+      &__title {
+        width: 260px;
+        font-size: 18px;
+        color: #4a4a4a;
+        font-weight: bold;
+        padding: 35px;
+        background-color: #f8faf5;
+        font-family: "Noto Sans JP";
+
+        @media screen and (max-width: 1024px) {
+          font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 640px) {
+          border-right: none;
+          width: 100%;
+          font-size: 1.4rem;
+          padding: 2% 4%;
+        }
+      }
+
+      &__contents {
+        background-color: #f8faf5;
+        width: calc(100% - 260px);
+        padding: 35px 100px;
+        font-size: 18px;
+        line-height: 2;
+        color: #4a4a4a;
+        font-weight: 400;
+        font-family: "Noto Sans JP";
+
+        @media screen and (max-width: 1024px) {
+          font-size: 1.6rem;
+          padding: 3% 5%;
+        }
+
+        @media screen and (max-width: 640px) {
+          width: 100%;
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
 }
 
@@ -2413,7 +2806,6 @@ a * {
     @media screen and (max-width: 640px) {
       padding: 0 4%;
     }
-
   }
 
   &__title {
@@ -2464,6 +2856,10 @@ a * {
     font-family: "Noto Sans JP";
     margin-bottom: 24px;
 
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 3%;
+    }
+
     @media screen and (max-width: 375px) {
       font-size: 2rem;
     }
@@ -2506,6 +2902,7 @@ a * {
     flex-wrap: wrap;
     gap: 80px 120px;
     margin-bottom: 80px;
+    justify-content: center;
 
     @media screen and (max-width: 1024px) {
       justify-content: center;
@@ -2566,6 +2963,7 @@ a * {
       @media screen and (max-width: 640px) {
         font-size: 1.8rem;
       }
+
       @media screen and (max-width: 375px) {
         font-size: 1.4rem;
       }
@@ -2721,6 +3119,7 @@ a * {
     &:nth-of-type(2n) {
       margin-bottom: 120px;
       flex-direction: row-reverse;
+
       @media screen and (max-width: 1024px) {
         margin-bottom: 12%;
       }
@@ -2784,6 +3183,7 @@ a * {
 .footer {
   padding: 47px 0 41px 0;
   background-color: #E8E8E8;
+
   @media screen and (max-width: 1024px) {
     padding: 5% 0
   }
