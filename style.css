@@ -942,6 +942,7 @@ a * {
 @media screen and (max-width: 1024px) {
   .concept__text__sub-title {
     margin-bottom: 4%;
+    font-size: 2.6rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -954,7 +955,7 @@ a * {
   font-family: "Noto Sans JP";
   line-height: 2;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .concept__text__info {
     font-size: 1.4rem;
   }
@@ -1015,7 +1016,7 @@ a * {
 @media screen and (max-width: 1024px) {
   .concern__title {
     margin-bottom: 5%;
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1097,6 +1098,11 @@ a * {
   font-weight: 500;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 1024px) {
+  .concern__content__info h3 {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 640px) {
   .concern__content__info h3 {
     font-size: 1.8rem;
@@ -1144,7 +1150,7 @@ a * {
 }
 @media screen and (max-width: 1024px) {
   .about {
-    padding-bottom: 14%;
+    padding-bottom: 12%;
   }
 }
 .about__container {
@@ -1172,7 +1178,8 @@ a * {
 }
 @media screen and (max-width: 1024px) {
   .about__title {
-    margin-bottom: 10%;
+    margin-bottom: 5.6%;
+    font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1292,6 +1299,7 @@ a * {
 @media screen and (max-width: 1024px) {
   .about__box__head {
     height: auto;
+    margin-bottom: 2.4%;
   }
 }
 .about__box__title {
@@ -1495,13 +1503,18 @@ a * {
 }
 @media screen and (max-width: 640px) {
   .point__ttl {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 }
 .point__txt {
   margin: 0 auto 20px;
   max-width: 736px;
   line-height: 2;
+}
+@media screen and (max-width: 1024px) {
+  .point__txt {
+    margin: 0 auto 2%;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1784,9 +1797,10 @@ a * {
   .idea__title {
     padding: 8%;
     margin-bottom: 4%;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .idea__title {
     font-size: 2rem;
   }
@@ -1801,9 +1815,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .idea__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .idea__title small {
   letter-spacing: 0;
@@ -2004,10 +2024,11 @@ a * {
 }
 @media screen and (max-width: 1024px) {
   .works__title {
-    margin-bottom: 8%;
+    margin-bottom: 4%;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .works__title {
     font-size: 2rem;
   }
@@ -2022,9 +2043,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .works__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .works__title small {
   letter-spacing: 0;
@@ -2160,9 +2187,10 @@ a * {
   .merit__title {
     padding-top: 12%;
     margin-bottom: 4%;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .merit__title {
     font-size: 2rem;
   }
@@ -2177,9 +2205,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .merit__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .merit__title small {
   letter-spacing: 0;
@@ -2200,10 +2234,14 @@ a * {
   text-align: center;
   margin-bottom: 48px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
+  .merit__sub-title {
+    margin-bottom: 4%;
+  }
+}
+@media screen and (max-width: 640px) {
   .merit__sub-title {
     font-size: 2rem;
-    margin-bottom: 4%;
   }
 }
 .merit__box {
@@ -2244,8 +2282,15 @@ a * {
   font-family: "Noto Sans JP";
   padding: 24px 0;
   text-align: center;
+  font-weight: 500;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
+  .merit__info__header {
+    padding: 2.4%;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
   .merit__info__header {
     padding: 4%;
     font-size: 1.8rem;
@@ -2293,9 +2338,10 @@ a * {
   .promise__title {
     padding-top: 12%;
     margin-bottom: 4%;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .promise__title {
     font-size: 2rem;
   }
@@ -2310,9 +2356,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .promise__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .promise__title small {
   letter-spacing: 0;
@@ -2331,9 +2383,14 @@ a * {
   font-size: 2.4rem;
   font-family: "Noto Sans JP";
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .promise__sub-title {
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .promise__sub-title {
+    font-size: 1.8rem;
   }
 }
 .promise__info {
@@ -2344,9 +2401,10 @@ a * {
   line-height: 2;
   padding: 24px 0 56px 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .promise__info {
     font-size: 1.4rem;
+    padding: 2.4% 0 5.6% 0;
   }
 }
 .promise__box {
@@ -2406,7 +2464,12 @@ a * {
   font-family: "Noto Sans JP";
   font-weight: 500;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
+  .promise__txt__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
   .promise__txt__title {
     font-size: 1.8rem;
   }
@@ -2503,10 +2566,15 @@ a * {
   padding-bottom: 32px;
   font-size: 2.4rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .contract__title {
-    padding: 7%;
+    padding-bottom: 3.2%;
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .contract__title {
+    font-size: 1.8rem;
   }
 }
 .contract__content {
@@ -2578,9 +2646,11 @@ a * {
 @media screen and (max-width: 1024px) {
   .contact__title {
     padding-top: 12%;
+    padding-bottom: 3.2%;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .contact__title {
     font-size: 2rem;
   }
@@ -2595,9 +2665,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .contact__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .contact__title small {
   display: block;
@@ -2624,10 +2700,18 @@ a * {
     padding: 6% 0 6% 0;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .contact__sub-title {
     font-size: 1.4rem;
     font-weight: 400;
+  }
+}
+.contact__sub-title .contact-br {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .contact__sub-title .contact-br {
+    display: block;
   }
 }
 .contact__form {
@@ -2667,14 +2751,10 @@ a * {
 @media screen and (max-width: 1024px) {
   .contact__text__contents {
     padding: 3%;
-  }
-}
-@media screen and (max-width: 640px) {
-  .contact__text__contents {
     font-size: 1.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .contact__text__contents {
     font-size: 1.4rem;
   }
@@ -2763,12 +2843,12 @@ a * {
     margin-bottom: 4%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .company__title {
     font-size: 2.4rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__title {
     font-size: 2rem;
   }
@@ -2783,9 +2863,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .company__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .company__title small {
   display: block;
@@ -2808,11 +2894,12 @@ a * {
 @media screen and (max-width: 1024px) {
   .company__sub-title {
     margin-bottom: 3%;
+    font-size: 2rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__sub-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 .company__sub-title span {
@@ -2820,9 +2907,9 @@ a * {
   display: inline-block;
   margin-right: 8px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__sub-title span {
-    width: 120px;
+    width: 100px;
   }
 }
 .company__sub-title span img {
@@ -2836,18 +2923,20 @@ a * {
   font-family: "Noto Sans JP";
   margin-bottom: 56px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1024px) {
   .company__text {
-    margin-bottom: 5%;
+    margin-bottom: 5.6%;
   }
 }
 .company__text .company-sp {
   display: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__text {
     font-size: 1.4rem;
   }
+}
+@media screen and (max-width: 375px) {
   .company__text .company-sp {
     display: block;
   }
@@ -2903,13 +2992,13 @@ a * {
   text-align: center;
   padding: 24px 0 32px 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .company__info__header {
     font-size: 2rem;
     padding: 4%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__info__header {
     font-size: 1.8rem;
   }
@@ -2921,10 +3010,10 @@ a * {
 }
 @media screen and (max-width: 1024px) {
   .company__info__txt {
-    padding-bottom: 8%;
+    padding-bottom: 10%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__info__txt {
     font-size: 1.4rem;
   }
@@ -3034,9 +3123,10 @@ a * {
   .access__title {
     padding-top: 12%;
     margin-bottom: 4%;
+    font-size: 2.6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .access__title {
     font-size: 2rem;
   }
@@ -3051,9 +3141,15 @@ a * {
   margin-bottom: -10px;
   width: 52px;
   height: 30px;
-  background: url(./img/tail.svg) no-repeat top center;
+  background: url(./img/tail.svg) no-repeat center center/contain;
   margin-right: 4px;
   left: 4px;
+}
+@media screen and (max-width: 640px) {
+  .access__title span::after {
+    width: 40px;
+    height: 20px;
+  }
 }
 .access__title small {
   display: block;
@@ -3072,6 +3168,11 @@ a * {
   justify-content: center;
   align-items: center;
   margin-bottom: 64px;
+}
+@media screen and (max-width: 1024px) {
+  .access__box {
+    margin-bottom: 6.4%;
+  }
 }
 @media screen and (max-width: 640px) {
   .access__box {
@@ -3095,9 +3196,14 @@ a * {
 .access__box:nth-of-type(2n) .access__txt {
   padding-left: 70px;
 }
+@media screen and (max-width: 1024px) {
+  .access__box:nth-of-type(2n) .access__txt {
+    padding: 7%;
+  }
+}
 @media screen and (max-width: 640px) {
   .access__box:nth-of-type(2n) .access__txt {
-    padding: 7% 0;
+    padding: 0 0 4% 0;
   }
 }
 .access__txt {
@@ -3127,7 +3233,7 @@ a * {
   font-weight: 400;
   line-height: 2;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .access__txt ul li {
     font-size: 1.4rem;
   }
