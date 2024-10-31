@@ -79,6 +79,7 @@ video {
   font-weight: normal;
   vertical-align: baseline;
   background: transparent;
+  scroll-behavior: smooth;
 }
 
 /* 行の高=フォントサイズ */
@@ -196,8 +197,6 @@ img {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -243,7 +242,9 @@ section {
 
 input[type=submit],
 input[type=button] {
-  appearance: button;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   border: none;
   box-sizing: border-box;
 }
@@ -479,7 +480,8 @@ a * {
 .header.is-scrolled {
   top: 0;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .header__container {
   height: 100%;
@@ -734,8 +736,10 @@ a * {
 .fv__slider--cnt .img-pc {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
-  object-position: center bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 @media screen and (max-width: 640px) {
   .fv__slider--cnt .img-pc {
@@ -750,7 +754,8 @@ a * {
     display: block;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .fv__container {
@@ -2738,6 +2743,7 @@ a * {
   .company__box {
     justify-content: center;
     align-items: center;
+    gap: 8% 12%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -2787,6 +2793,11 @@ a * {
   font-size: 1.6rem;
   font-family: "Noto Sans JP";
   font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  .company__info__txt {
+    padding-bottom: 8%;
+  }
 }
 @media screen and (max-width: 640px) {
   .company__info__txt {
@@ -3038,6 +3049,4 @@ a * {
 .footer p {
   font-family: "Noto serif JP";
   font-size: 1.4rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

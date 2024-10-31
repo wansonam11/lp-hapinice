@@ -79,6 +79,7 @@ video {
   font-weight: normal;
   vertical-align: baseline;
   background: transparent;
+  scroll-behavior: smooth;
 }
 
 /* 行の高=フォントサイズ */
@@ -2907,6 +2908,7 @@ a * {
     @media screen and (max-width: 1024px) {
       justify-content: center;
       align-items: center;
+      gap: 8% 12%;
     }
 
     @media screen and (max-width: 640px) {
@@ -2959,6 +2961,9 @@ a * {
       font-size: 1.6rem;
       font-family: "Noto Sans JP";
       font-weight: 400;
+      @media screen and (max-width: 1024px) {
+        padding-bottom: 8%;
+      }
 
       @media screen and (max-width: 640px) {
         font-size: 1.8rem;
