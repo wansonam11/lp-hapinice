@@ -314,6 +314,10 @@ body.fix {
   width: 100%;
 }
 
+button {
+  padding: 0;
+}
+
 html,
 body {
   width: 100%;
@@ -963,6 +967,7 @@ a * {
       margin-bottom: 48px;
       @media screen and (max-width: 1024px) {
         margin-bottom: 4%;
+        width: 300px;
       }
 
       @media screen and (max-width: 640px) {
@@ -981,6 +986,7 @@ a * {
     }
 
     &__sub-title {
+      line-height: 1.5;
       font-weight: 700;
       font-size: 3.2rem;
       font-family: "Noto Sans JP";
@@ -2809,6 +2815,9 @@ a * {
     display: flex;
     gap: 32px;
     cursor: pointer;
+    @media screen and (max-width: 640px) {
+      gap: 16px;
+    }
   }
 
   &__item {
@@ -3018,7 +3027,7 @@ a * {
     @media screen and (max-width: 640px) { 
       font-size: 1.4rem;
     }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 640px) {
       .company-sp {
         display: block;
       }

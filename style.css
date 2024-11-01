@@ -197,6 +197,8 @@ img {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
@@ -242,9 +244,7 @@ section {
 
 input[type=submit],
 input[type=button] {
-  -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
+  appearance: button;
   border: none;
   box-sizing: border-box;
 }
@@ -311,6 +311,10 @@ body {
 body.fix {
   position: fixed;
   width: 100%;
+}
+
+button {
+  padding: 0;
 }
 
 html,
@@ -480,8 +484,7 @@ a * {
 .header.is-scrolled {
   top: 0;
   background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .header__container {
   height: 100%;
@@ -736,10 +739,8 @@ a * {
 .fv__slider--cnt .img-pc {
   width: 100%;
   height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  object-fit: cover;
+  object-position: center bottom;
 }
 @media screen and (max-width: 640px) {
   .fv__slider--cnt .img-pc {
@@ -754,8 +755,7 @@ a * {
     display: block;
     width: 100%;
     height: 100vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .fv__container {
@@ -920,6 +920,7 @@ a * {
 @media screen and (max-width: 1024px) {
   .concept__text__title {
     margin-bottom: 4%;
+    width: 300px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -938,6 +939,7 @@ a * {
   width: 100%;
 }
 .concept__text__sub-title {
+  line-height: 1.5;
   font-weight: 700;
   font-size: 3.2rem;
   font-family: "Noto Sans JP";
@@ -2729,6 +2731,11 @@ a * {
   gap: 32px;
   cursor: pointer;
 }
+@media screen and (max-width: 640px) {
+  .contact__tab {
+    gap: 16px;
+  }
+}
 .contact__item {
   opacity: 0.4;
   width: 380px;
@@ -2941,7 +2948,7 @@ a * {
     font-size: 1.4rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
   .company__text .company-sp {
     display: block;
   }
@@ -3299,4 +3306,6 @@ a * {
 .footer p {
   font-family: "Noto serif JP";
   font-size: 1.4rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
