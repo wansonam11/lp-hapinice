@@ -924,13 +924,13 @@ a * {
 }
 @media screen and (max-width: 640px) {
   .concept__text__title {
-    width: 200px;
+    width: 150px;
     height: auto;
   }
 }
 @media screen and (max-width: 375px) {
   .concept__text__title {
-    width: 150px;
+    width: 100px;
     height: auto;
   }
 }
@@ -1066,6 +1066,7 @@ a * {
   .concern__content__item {
     flex-direction: column;
     align-items: unset;
+    gap: 30px;
   }
 }
 .concern__content__item:nth-last-child(1) {

@@ -951,7 +951,6 @@ a * {
   &__text {
     width: calc(100% - 600px);
     padding-right: 80px;
-
     @media screen and (max-width: 1024px) {
       width: 100%;
       padding-bottom: 4%;
@@ -967,12 +966,12 @@ a * {
       }
 
       @media screen and (max-width: 640px) {
-        width: 200px;
+        width: 150px;
         height: auto;
       }
 
       @media screen and (max-width: 375px) {
-        width: 150px;
+        width: 100px;
         height: auto;
       }
 
@@ -1104,6 +1103,7 @@ a * {
       @media screen and (max-width: 640px) {
         flex-direction: column;
         align-items: unset;
+        gap: 30px;
       }
 
       &:nth-last-child(1) {
